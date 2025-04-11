@@ -1,6 +1,6 @@
 
           
-          '[data-testid="filter-panel-chip"]': {
+          [data-testid="filter-panel-chip"] {
             "background-color":"red !important"
           }
         
