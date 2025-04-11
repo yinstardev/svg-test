@@ -1,0 +1,15 @@
+[data-testid="filter-panel-chip"] {
+    background-color: red !important; /* Default color */
+}
+
+@media (max-width: 600px) {
+    [data-testid="filter-panel-chip"] {
+        background-color: blue !important; /* Color for small screens */
+    }
+}
+
+@media (min-width: 601px) {
+    [data-testid="filter-panel-chip"] {
+        background-color: green !important; /* Color for larger screens */
+    }
+}
