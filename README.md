@@ -32,7 +32,7 @@ Alternatively, add the following dependency to your `Package.swift` file:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/thoughtspot/swift-embed-sdk.git", from: "x.x.x")
+    .package(url: "https://github.com/thoughtspot/swift-embed-sdk.git", from: "x.y.z")
 ]
 ```
 
