@@ -1,6 +1,6 @@
 # ThoughtSpot Swift Embed SDK
 
-ThoughtSpot Swift Embed SDK enables developers to seamlessly integrate ThoughtSpot analytics into iOS applications. This SDK provides native Swift components to embed ThoughtSpot Liveboards, visualizations, and search functionality.
+ThoughtSpot Swift Embed SDK enables developers to seamlessly integrate ThoughtSpot into iOS applications. This SDK provides native Swift components to embed ThoughtSpot Liveboards and visualizations.
 
 [![Swift](https://img.shields.io/badge/Swift-5.5+-orange.svg)](https://swift.org)
 [![iOS](https://img.shields.io/badge/iOS-14.0+-blue.svg)](https://developer.apple.com/ios/)
@@ -35,6 +35,7 @@ dependencies: [
     .package(url: "https://github.com/thoughtspot/swift-embed-sdk.git", from: "x.y.z")
 ]
 ```
+Check the tags published on github repo.
 
 ## Getting Started
 
@@ -48,7 +49,7 @@ import Combine
 
 ## Authentication
 
-The SDK supports authentication using the TrustedAuthToken method. You'll need to implement a function to fetch the authentication token.
+The SDK supports authentication using the TrustedAuthTokenCookieless method. You'll need to implement a function to fetch the authentication token.
 
 ### Example Authentication Token Fetcher
 
@@ -109,7 +110,7 @@ Configure your embed with necessary settings:
 // 1. Create a static embed configuration
 let staticEmbedConfig = EmbedConfig(
     thoughtSpotHost: "https://your-thoughtspot-instance.com",
-    authType: .TrustedAuthTokenCookieless,
+    authType: AuthType.TrustedAuthTokenCookieless,
     customizations: customizationsObject // Optional customizations
 )
 
@@ -149,7 +150,7 @@ let liveboardController = LiveboardEmbedController(
 
 ### Embedding in SwiftUI
 
-Here's a basic example of embedding a Liveboard in SwiftUI:
+Here's a basic example of embedding a Liveboard in SwiftUI with Embed & HostEvents support:
 
 ```swift
 struct LiveboardView: View {
@@ -295,7 +296,7 @@ struct HomeView: View {
         // Create embed configuration
         let staticEmbedConfig = EmbedConfig(
             thoughtSpotHost: thoughtSpotHost,
-            authType: .TrustedAuthTokenCookieless,
+            authType: AuthType.TrustedAuthTokenCookieless,
             customizations: customizationsObject
         )
         
