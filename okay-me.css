@@ -12,6 +12,9 @@
 
   --ts-var-root-background: red;
   --ts-var-root-color: green;
+    --ts-var-viz-title-color: red;
+  --ts-var-viz-title-font-family: blue;
+  --ts-var-viz-title-text-transform: green;
 }
 
 /*# sourceMappingURL=custom_variables.css.map */
