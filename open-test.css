@@ -1,0 +1,28 @@
+/*
+ * Test stylesheet for embed customizations.style.customCSSUrl
+ * Purpose: verify customer URL-based :root variables are NOT overridden
+ * by the app-generated theme <style id="appThemeCss"> element.
+ *
+ * Loud colours on purpose — if these show, the customer CSS is winning.
+ */
+
+:root {
+    /* Nav bar — should stay green even when a brand theme is applied */
+    --ts-var-nav-background: #2e7d32;
+
+    /* App background — light green tint, easy to spot */
+    --ts-var-root-background: #e8f5e9;
+
+    /* Primary buttons — purple, contrasts with any brand colour */
+    --ts-var-button--primary-background: #6a1b9a;
+    --ts-var-button--primary-color: #ffffff;
+
+    /* Text colour */
+    --ts-var-root-color: #1b5e20;
+}
+
+/* Marker rule — inspect any element for this to confirm the file loaded,
+   independent of the variable cascade. */
+body {
+    --customcssurl-loaded: 'yes';
+}
