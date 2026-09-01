@@ -1,0 +1,20 @@
+/*! ThoughtSpot 2022-09-17
+* http://www.thoughtspot.com/
+* Copyright (c) 2022 ThoughtSpot 
+*/
+
+/******** Useful design resources ********/
+/* Check our Radiant style guide. For colors: https://radiant.thoughtspot.com/4be2fa497/p/28fa0a-colors/t/835c57 */
+/****************************************/
+
+
+:root {
+
+  --ts-var-root-background: red;
+  --ts-var-root-color: green;
+    --ts-var-viz-title-color: red;
+  --ts-var-viz-title-font-family: blue;
+  --ts-var-viz-title-text-transform: green;
+}
+
+/*# sourceMappingURL=custom_variables.css.map */
